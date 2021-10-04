@@ -1,1 +1,2 @@
-include ':app'
+include ':app', ':vpnLib'
+rootProject.name='Safe-Vpn'
