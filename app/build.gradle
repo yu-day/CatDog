@@ -75,7 +75,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 
     // Required for instrumented tests
-    androidTestImplementation 'androidx.annotation:annotation:1.0.0'
+    androidTestImplementation 'androidx.annotation:annotation:1.2.0'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     //implementation 'com.google.firebase:firebase-ads:17.1.2'
     //testImplementation 'junit:junit:4.12'
