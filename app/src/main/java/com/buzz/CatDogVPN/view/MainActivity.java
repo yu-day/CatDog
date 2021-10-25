@@ -1,4 +1,4 @@
-package com.lazycoder.cakevpn.view;
+package com.buzz.CatDogVPN.view;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
