@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "421202807663",
+    "project_id": "catdogvpn",
+    "storage_bucket": "catdogvpn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421202807663:android:f3ae66be1b0738d41e369a",
+        "android_client_info": {
+          "package_name": "com.buzz.CatDogVPN"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421202807663-plluo5eioqkvjdolnrbbsipo2at48p13.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmDCpVebQJOE0Hing3ZMvc2pq4BKe6ptg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "421202807663-plluo5eioqkvjdolnrbbsipo2at48p13.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
