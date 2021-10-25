@@ -1,4 +1,4 @@
-ckage com.lazycoder.cakevpn.view;
+ckage com.buzz.CatDogVPN.view;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
