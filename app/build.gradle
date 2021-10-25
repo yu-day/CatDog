@@ -1,85 +1,49 @@
-//noinspection GradleCompatible
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.firebase.firebase-perf'
-apply plugin: 'io.fabric'
+
 android {
     compileSdkVersion 30
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 12
+        versionName "1.6"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        applicationId 'com.buzz.CatDogVPN'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        dataBinding true
+        // for view binding:
+        // viewBinding true
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    defaultConfig {
-        applicationId "com.buzz.vpn"
-        minSdkVersion 21
-        targetSdkVersion 30
-        vectorDrawables.useSupportLibrary = true
-        // api.major.patch
-        // api when you obsolete the existing api
-        // major add functionality
-        // bug fixes in functionality
-
-        //abiFilters "armeabi-v7a"
-        //abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a'
-
-        versionCode 37
-        versionName "2.8.2000"
-        //abiFilters "armeabi-v7a"
-        ndk {
-            abiFilters "arm64-v8a", "armeabi-v7a", "x86", "x86_64"
-        }
-        resConfigs "en", "zh-rCN"
-    }
-    aaptOptions {
-        cruncherEnabled = false
-    }
-    buildTypes {
-        release {
-            minifyEnabled true
-            zipAlignEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            // proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+    buildToolsVersion '30.0.1'
 }
-android.lintOptions {
-    disable 'MissingTranslation'//, 'ManifestResource'
-}
+
 dependencies {
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    //noinspection GradleCompatible
-    implementation 'androidx.browser:browser:1.3.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.android.volley:volley:1.2.1'
-
-    implementation 'com.google.firebase:firebase-core:17.2.1' //16.0.9'
-    implementation 'com.google.firebase:firebase-perf:20.0.3'
-    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
-
-    implementation 'com.airbnb.android:lottie:3.7.2'
-    //Implementation 'androidx.annotation:annotation:1.1.0'
-
-    implementation 'com.android.support:support-annotations:28.0.0'
-
-    //implementation 'com.google.android.gms:play-services-ads:17.2.1'
-    //implementation 'com.robinhood.spark:spark:1.2.0'
-    //implementation 'com.google.firebase:firebase-ads:17.2.1'
-    //implementation 'com.appbrain:appbrain-sdk:+@aar'
-
-    //implementation 'com.android.support:recyclerview-v7:28.0.0' // Required Dependency by Audience Network SDK
-    //implementation 'com.facebook.android:audience-network-sdk:5.3.1'
-
-    // Required for local unit tests (JUnit 4 framework)
+    implementation 'androidx.core:core:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
     testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
 
-    // Required for instrumented tests
-    androidTestImplementation 'androidx.annotation:annotation:1.2.0'
-    androidTestImplementation 'androidx.test:runner:1.4.0'
-    //implementation 'com.google.firebase:firebase-ads:17.1.2'
-    //testImplementation 'junit:junit:4.12'
-    //androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    //androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    // Glide image loader
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation project(path: ':vpnLib')
 }
-apply plugin: 'com.google.gms.google-services'
