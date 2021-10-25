@@ -1,4 +1,4 @@
-package com.lazycoder.cakevpn;
+package com.buzz.CatDogVPN;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
